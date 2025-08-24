@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+     .nav-btn:hover{
+        background-color: rgb(50, 48, 48);
+      }
+      .log:hover{
+        background-color: rgb(50, 48, 48);
+      }
+      .pic{
+        position: relative;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .cfeatures{
+        position:absolute;
+       
+        height: auto;
+        width: 80%;
+        object-fit: cover;
+        background-color:rgb(28, 29, 29);
+        top: auto;
+        margin: 0;
+        
+       justify-items:var(center); 
+       transform: translateX(10%);
+       color: white;
+       
+      }
+      
+
+    </style>
+</head>
+<body class="bg-slate-900">
+  <!-- Navbar Stared here -->
+   <nav class="flex justify-between p-4 text-amber-200 h-auto bg-indigo-600 sticky top-0">
+    <div class="text-2xl font-bold">Logo</div>
+    <div id="dropdown-menu" class="-top-full md:flex hidden static flex-wrap justify-center items-center">
+      <button id="homeBtn" data-target="homeFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Home</button >
+      <button  id="servBtn" data-target="servFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Service</button >
+      <button  id="insiBtn" data-target="insiFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Insights</button >
+      <button  id="contBtn" data-target="contFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Contact Us</button >
+      <button  id="careBtn" data-target="careFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Career</button >
+    </div>
+    <div class=" log hidden md:block px-2 py-2 bg-indigo-700 font-bold cursor-pointer rounded-2xl ">Login/Signup</div>
+    <div id="toogle-button" class="md:hidden">
+      <a class="text-4xl" href="#">&#8801;</a>
+    </div>
+ </nav>
+   <!-- Navbar End here -->
+
+    <!-- Features Home section satrt here-->
+     <!-- Features Home section3 satrt here-->
+  <div id="homeFeatures" class="cfeatures max-h-0 hidden  ">
+      <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
+      <div class="p-4 bg-gray-100 rounded-lg shadow">🏠 Feature 1: Home</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">✨ Feature 2: Highlight Section</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📸 Feature 3: Image Gallery</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📩 Feature 4: Contact Info</div>
+    </div>
+  </div>
+   <!-- Features Home section end here-->
+
+     <!-- Features Service section satrt here-->
+  <div id="servFeatures" class="cfeatures max-h-0 hidden  ">
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
+      <div class="p-4 bg-gray-100 rounded-lg shadow">🏠 Feature 1: Sevice</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">✨ Feature 2: Service Section</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📸 Feature 3: photo Gallery</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📩 Feature 4: product Info</div>
+    </div>
+  </div>
+   <!-- Features service section end here-->
+
+   <!-- Features insight section satrt here-->
+  <div id="insiFeatures" class="cfeatures max-h-0 hidden  ">
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
+      <div class="p-4 bg-gray-100 rounded-lg shadow">🏠 Feature 1: Insights</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">✨ Feature 2: Service Section</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📸 Feature 3: photo Gallery</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📩 Feature 4: product Info</div>
+    </div>
+  </div>
+   <!-- Features insight section end here-->
+    <!-- Features insight section satrt here-->
+  <div id="contFeatures" class="cfeatures max-h-0 hidden  ">
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
+      <div class="p-4 bg-gray-100 rounded-lg shadow">🏠 Feature 1: Contact</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">✨ Feature 2: Service Section</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📸 Feature 3: photo Gallery</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📩 Feature 4: product Info</div>
+    </div>
+  </div>
+   <!-- Features insight section end here-->
+    <!-- Features insight section satrt here-->
+  <div id="careFeatures" class="cfeatures max-h-0 hidden  ">
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
+      <div class="p-4 bg-gray-100 rounded-lg shadow">🏠 Feature 1: Career</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">✨ Feature 2: Service Section</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📸 Feature 3: photo Gallery</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📩 Feature 4: product Info</div>
+    </div>
+  </div>
+   <!-- Features insight section end here-->
+    
+
+   <!--  image section start here -->
+    <header class="w-full h-auto">
+      <img class=" pic w-full hidden md:block " src=".\landec.jpg" alt="">
+       <img class="w-full md:hidden" src=".\potr.jpg" alt=""> 
+      
+    </header>
+    <!-- image section end here -->
+
+    <!-- our customer section start here -->
+   <div class="h-auto w-full flex flex-wrap justify-center items-center text-center p-10">
+    <div class="w-full h-auto flex flex-wrap flex-col items-center">
+      <p class="text-indigo-800 font-bold text-3xl md:text-4xl text-center">Pure Hardwork, No Shortcut</p>
+      <div class="w-36 h-1 border-b-4 border-yellow-400 mt-2 rounded-2xl md:mt-4 mb-12"></div>
+    </div>
+  </div>  
+    <div class="w-full flex flex-wrap justify-evenly ">
+      
+        
+         <div class="w-46 flex flex-col items-center mb-12">
+          <img class="w-22 h-22 rounded-full" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 flex flex-col items-center mb-12">
+          <img class="w-22 h-22 rounded-full" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 flex flex-col items-center mb-12">
+          <img class="w-22 h-22 rounded-full" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+    </div>
+    
+    <!-- our customer section end here -->
+     
+     <!-- our Product section start here -->
+
+    <div class="h-auto w-full flex flex-wrap justify-center items-center text-center p-10">
+    <div class="w-full h-auto flex flex-wrap flex-col items-center">
+      <p class="text-indigo-800 font-bold text-3xl md:text-4xl text-center">Our Products</p>
+      <div class="w-36 h-1 border-b-4 border-yellow-400 mt-2 rounded-2xl md:mt-4 mb-12"></div>
+      </div>
+    </div>
+      
+    <div class="w-full flex flex-wrap justify-around">
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+    </div>
+    <!-- our Product section end here -->    
+     <!-- our footer section start here  -->
+     <footer class="w-full bg-gray-600 px-4 text-white pt-8 flex flex-col md:flex-row flex-wrap justify-between md:px-12">
+      <div>
+        <img class="w-22 h-22 rounded-full top-1"src=".\logo.jpg" alt="">
+        <p class="my-4">Email us: kkanhaiya942@gmail.com</p>
+        <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+      </div>
+      <div>
+        <h2 class="font-bold text-xl mt-4">ComName</h2>
+        <div class="w-32 h-1 border-b-2 border-amber-400 rounded-2xl my-2"></div>
+        <div>
+          <p>About Us</p>
+          <p>FAQ</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="font-bold text-xl mt-4">ComName</h2>
+        <div class="w-32 h-1 border-b-2 border-amber-400 rounded-2xl my-2"></div>
+        <div>
+          <p>About Us</p>
+          <p>FAQ</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="font-bold text-xl mt-4">ComName</h2>
+        <div class="w-32 h-1 border-b-2 border-amber-400 rounded-2xl my-2"></div>
+        <div>
+          <p>About Us</p>
+          <p>FAQ</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+
+     </footer>
+<!-- our footer section end here  -->
+
+<!-- toggle button behaviour code> -->
+<script>
+  const toggleButton = document.getElementById('toogle-button');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  toggleButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+  });
+  toggleButton.addEventListener('click', () => {
+    toggleButton.classList.toggle('top-full');
+  });
+
+
+  // Features (show on hover) script start here
+const homeBtn = document.getElementById("homeBtn");
+const homeFeatures = document.getElementById("homeFeatures");
+
+const servBtn = document.getElementById("servBtn");
+const servFeatures = document.getElementById("servFeatures");
+
+const insiBtn = document.getElementById("insiBtn");
+const insiFeatures = document.getElementById("insiFeatures");
+
+const contBtn = document.getElementById("contBtn");
+const contFeatures = document.getElementById("contFeatures");
+
+const careBtn = document.getElementById("careBtn");
+const careFeatures = document.getElementById("careFeatures");
+
+homeBtn.addEventListener("click", () => {
+  // hide others
+  servFeatures.classList.add("hidden");
+  insiFeatures.classList.add("hidden");
+  contFeatures.classList.add("hidden");
+  careFeatures.classList.add("hidden");
+
+  // toggle home features
+  homeFeatures.classList.toggle("hidden");
+});
+
+servBtn.addEventListener("click", () => {
+  // hide others
+  homeFeatures.classList.add("hidden");
+  insiFeatures.classList.add("hidden");
+  contFeatures.classList.add("hidden");
+  careFeatures.classList.add("hidden");
+
+  // toggle service features
+  servFeatures.classList.toggle("hidden");
+});
+
+insiBtn.addEventListener("click", () => {
+  // hide others
+  homeFeatures.classList.add("hidden");
+  servFeatures.classList.add("hidden");
+  contFeatures.classList.add("hidden");
+  careFeatures.classList.add("hidden");
+
+  // toggle insights features
+  insiFeatures.classList.toggle("hidden");
+});
+
+contBtn.addEventListener("click", () => {
+  // hide others
+  homeFeatures.classList.add("hidden");
+  servFeatures.classList.add("hidden");
+  insiFeatures.classList.add("hidden");
+  careFeatures.classList.add("hidden");
+
+  // toggle insights features
+  contFeatures.classList.toggle("hidden");
+});
+
+careBtn.addEventListener("click", () => {
+  // hide others
+  homeFeatures.classList.add("hidden");
+  servFeatures.classList.add("hidden");
+  insiFeatures.classList.add("hidden");
+  contFeatures.classList.add("hidden");
+
+  // toggle insights features
+  careFeatures.classList.toggle("hidden");
+});
+
+
+
+ 
+  // Features (show on hover) script end here
+  
+  </script>
+<!-- toggle button behaviour code end here -->
+
+</body>
+</html>
