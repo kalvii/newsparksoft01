@@ -51,6 +51,7 @@
 }  
 .banner-card{
   position: relative;
+  
 }
       .banner-text{
         position: absolute;
@@ -61,6 +62,7 @@
         color: white;
         font-size: 2rem;
         font-weight: bold;
+        z-index: -1;
       }
       .banner-text h4{
         font-size: 6rem;
@@ -80,9 +82,47 @@
         border-radius: 8px;
         cursor: pointer;
       }
+      .customer_stor{
+        background-color: white;
+      }
+      .stoies{
+        background-color: white;
+        
+      }
+      .common{
+        position: relative;
+        width: 400px;
+       
+        
+      }
+      .overlay{
+        position: absolute;
+        bottom: 60px;
+        color: white;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 8px;
+         background: rgba(0,0,0,0.4);
+      }
+      .customer_stor{
+        position: relative;
+         z-index: -1;
+      }
       
+      .overlay h4{
+        font-size:35px;
+      }
+      .overlay p{
+        font-size:20px;
+      } 
+     .rbutton{
+        margin-top: 10px;
+        padding: 10px;
+        background-color: blue;
+        border-radius: 8px;
+        cursor: pointer;
+      }
       
-
     </style>
 </head>
 <body class="bg-slate-900">
@@ -185,7 +225,7 @@ We are a digital transformation and technology partner of choice for industry-le
     
 
    <!--  image section start here -->
-    <div class="banner-card w-full h-auto  ">
+    <div class="banner-card w-full h-auto flex flex-wrap ">
       <img class=" pic w-full hidden md:block " src=".\frontpage.jpg" alt="">
        <img class="w-full md:hidden" src=".\potr.jpg" alt=""> 
         <div class="banner-text  ">
@@ -203,29 +243,42 @@ We are a digital transformation and technology partner of choice for industry-le
     <!-- image section end here -->
 
     <!-- our customer section start here -->
-   <div class="h-auto w-full flex flex-wrap justify-center items-center text-center p-10">
-    <div class="w-full h-auto flex flex-wrap flex-col items-center">
-      <p class="text-indigo-800 font-bold text-3xl md:text-4xl text-center">Pure Hardwork, No Shortcut</p>
-      <div class="w-36 h-1 border-b-4 border-yellow-400 mt-2 rounded-2xl md:mt-4 mb-12"></div>
+   <div class="stoies h-auto w-full flex flex-wrap justify-center items-start text-start p-10 ">
+    <div class="w-full h-auto flex flex-wrap flex-col items-start">
+      <p class="text-black font-bold text-2xl md:text-4xl items-start">Customer Stories</p>
+      
     </div>
   </div>  
-    <div class="w-full flex flex-wrap justify-evenly ">
+    <div class="customer_stor w-full flex flex-wrap justify-evenly">
       
         
-         <div class="w-46 flex flex-col items-center mb-12">
-          <img class="w-22 h-22 rounded-full" src=".\logo.jpg" alt="">
-          <p class="text-3xl font-bold text-white">600+</p>
-          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         <div class=" relative common  flex flex-col items-center mb-12">
+          <img class=" rounded-2xl" src=".\costu1.jpg" alt="">
+         <div class="overlay">
+           <h4>Foxtel</h4>
+           <p>Transform IT infrastructure with next-gen endpoint management</p>
+           <button class="rbutton">READ MORE</button>
          </div>
-         <div class="w-46 flex flex-col items-center mb-12">
-          <img class="w-22 h-22 rounded-full" src=".\logo.jpg" alt="">
-          <p class="text-3xl font-bold text-white">600+</p>
-          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         
+        </div>
+         <div class="common flex flex-col items-center mb-12">
+          <img class="rounded-2xl" src=".\costu2.jpg" alt="">
+         <div class="overlay">
+           <h4>Kelly Service</h4>
+           <p>Builds a smarter, faster IT service desk to scale with business needs</p>
+            <button class="rbutton">READ MORE</button>
          </div>
-         <div class="w-46 flex flex-col items-center mb-12">
-          <img class="w-22 h-22 rounded-full" src=".\logo.jpg" alt="">
-          <p class="text-3xl font-bold text-white">600+</p>
-          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+          
+         </div>
+         <div class="common  flex flex-col items-center mb-12">
+          <img class="rounded-2xl" src=".\couts3.jpg" alt="">
+          <div class="overlay">
+           <h4>Morrisons and SparkSoft</h4>
+           <p>A strong and enduring partnership over the past d
+            ecade grounded in shared commitment to innovation and customer-centricity.</p>
+             <button class="rbutton">READ MORE</button>
+         </div>
+          
          </div>
     </div>
     
@@ -242,7 +295,7 @@ We are a digital transformation and technology partner of choice for industry-le
       
     <div class="w-full flex flex-wrap justify-around">
          <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
-          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <img class="w-22 h-22 rounded-full top-1 " src=".\logo.jpg" alt="">
           <p class="text-3xl font-bold text-white">600+</p>
           <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
          </div>
