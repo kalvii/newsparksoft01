@@ -20,36 +20,46 @@
         object-fit: cover;
         z-index: -1;
       }
-      .cfeatures{
-        position:fixed;
-       
-        height: auto;
-        width: 80%;
-        object-fit: cover;
-        background-color:rgb(33, 37, 41);
-        top: auto;
-        margin: 0;
-        
-       justify-items:var(center); 
-       transform: translateX(10%);
-       color: white;
-       
-      }
+    
+
+@media (max-width: 767px){
+  .cfeatures{ top: 56px; }   /* tweak if your mobile navbar is taller/shorter */
+}
+
       .hed{
         background-color:rgb(33, 37, 41) ;
+       
       }
-      
+      #consuFeat{
+        transform: translateX(15%);
+      }
+
+      .pmenu{
+        color: aquamarine;
+        
+      }
+      .cfeatures{
+  position:fixed;
+  left: 0;
+  right: 0;
+  top:auto;           /* adjust to your navbar height */
+  width: 80%;
+  background-color: rgb(33, 37, 41);
+  color: white;
+  z-index: 50;         /* above page content */
+  transform: translateX(10%);    /* remove translateX that shifts it */
+}
 
     </style>
 </head>
 <body class="bg-slate-900">
   <!-- Navbar Stared here -->
-   <nav class="hed flex justify-between p-4 text-white h-auto sticky top-0  ">
+   <nav class="hed  flex justify-between p-4 text-white h-auto sticky top-0 ">
     <div class="text-2xl font-bold  items-center md:flex hidden">SparkSoft Solution</div>
     <div>
       <img class="w-22 h-22 rounded-2xl top-1 md:hidden"src=".\spark.png" alt="">
      </div>
-    
+ 
     <div id="dropdown-menu" class="-top-full md:flex hidden  flex-wrap justify-center items-center">
       <button id="homeBtn" data-target="homeFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Service<span class="arrow1">▼</span></button >
       <button  id="servBtn" data-target="servFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Industries<span class="arrow2">▼</span></button >
@@ -66,8 +76,9 @@
    <!-- Navbar End here -->
 
     <!-- Features Home section satrt here-->
+<div class="pmenu">
      
-  <div class=" w-full  flex justify-start flex-wrap flex-row  cfeatures max-h-0">
+  <div class=" w-full  flex justify-start flex-wrap flex-row  cfeatures ">
     <div id="homeFeatures" class=" flex-col   p-6  md:grid-cols-2 hidden">
       <div id="consuBtn" class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Consulting</div>
       <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Enterprise Solutions</div>
@@ -75,28 +86,40 @@
       <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Network Solutions and Services</div>
     </div>
     
-    <div id="consuFeat" class="w-1/2 flex-col justify-center items-center p-6 rounded-lg shadow hidden">
-    <h1 class="text-xl font-bold">This is about Consulting</h1>
-    <p class="mt-2">This is for testing purpos vjh  kjv dgeroij  ifjweoj roivoer oir e</p>
+    <div id="consuFeat" class="w-1/2 flex-col justify-center items-center p-6 rounded-lg shadow hidden opacity-5">
+    <h1 class="text-xl font-bold">Strategy & Planning</h1>
+    <ul>
+      <li>Aligning IT infrastructure with business objectives</li>
+      <li>Digital transformation roadmaps</li>
+      <li>Cloud migration strategies</li>
+      <li>Identify strengths, weaknesses, and areas of risk or redundancy.</li>
+      <li>Compare current capabilities with future needs.</li>
+      <li>Create a phased plan for upgrades, migrations, and new implementations.</li>
+      <li>Prioritize based on ROI, urgency, and resource availability.</li>
+      <li>Identify potential risks (cybersecurity, data loss, regulatory issues).</li>
+      <li>Build mitigation strategies and ensure compliance with standards (e.g., GDPR, ISO, HIPAA).</li>
+      <li>Develop communication plans, training programs, and stakeholder engagement strategies.</li>
+    </ul>
   </div>
   </div>
    <!-- Features Home section end here-->
 
      <!-- Features Service section satrt here-->
-  <div id="servFeatures" class="cfeatures max-h-0 hidden  ">
-    <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
-      <div class="p-4 bg-gray-100 rounded-lg shadow">Public Services</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow">Retail</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow">Travel and Logistics</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow">Education</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow">Healthcare</div>
-      <div class="p-4 bg-gray-100 rounded-lg shadow">Communications, Media, and Information Services</div>
-    </div>
+  <div class=" w-full  flex justify-start flex-wrap flex-row  cfeatures ">  
+    <div id="servFeatures" class=" flex-col   p-6  md:grid-cols-2 hidden  ">
+    <!-- <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10"> -->
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Public Services</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Retail</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Travel and Logistics</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Education</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Healthcare</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Communications, Media, and Information Services</div>
+     </div>
   </div>
    <!-- Features service section end here-->
 
    <!-- Features insight section satrt here-->
-  <div id="insiFeatures" class="cfeatures max-h-0 hidden  ">
+  <div id="insiFeatures" class="cfeatures  hidden  ">
     <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
       <div class="p-4 bg-gray-100 rounded-lg shadow">Discover why customers choose SparkSoft Solution
 We are a digital transformation and technology partner of choice for industry-leading organizations worldwide.</div>
@@ -105,7 +128,7 @@ We are a digital transformation and technology partner of choice for industry-le
   </div>
    <!-- Features insight section end here-->
     <!-- Features insight section satrt here-->
-  <div id="contFeatures" class="cfeatures max-h-0 hidden  ">
+  <div id="contFeatures" class="cfeatures  hidden  ">
     <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
       <div class="p-4 bg-gray-100 rounded-lg shadow"> Reach out to us for inquiries, partnerships, or support.</div>
       <div class="p-4 bg-gray-100 rounded-lg shadow">123 Corporate Park, New Delhi, India</div>
@@ -115,7 +138,7 @@ We are a digital transformation and technology partner of choice for industry-le
   </div>
    <!-- Features insight section end here-->
     <!-- Features insight section satrt here-->
-  <div id="careFeatures" class="cfeatures max-h-0 hidden  ">
+  <div id="careFeatures" class="cfeatures  hidden  ">
     <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
       <div class="p-4 bg-gray-100 rounded-lg shadow"> Want to be a global change-maker? Join our team.</div>
       <div class="p-4 bg-gray-100 rounded-lg shadow">At SparkSoft Solution, we believe exceptional work begins with hiring, celebrating
@@ -124,13 +147,18 @@ We are a digital transformation and technology partner of choice for industry-le
       
     </div>
   </div>
+  </div>  
    <!-- Features insight section end here-->
     
 
    <!--  image section start here -->
-    <header class="w-full h-auto">
-      <img class=" pic w-full hidden md:block " src=".\landec.jpg" alt="">
+    <header class="w-full h-auto  ">
+      <img class=" pic w-full hidden md:block " src=".\frontpage.jpg" alt="">
        <img class="w-full md:hidden" src=".\potr.jpg" alt=""> 
+       <div class=" absolute to-5% text-white text-4xl font-bold bg-transparent top-2 ">
+        <h1>IT Services</h1>
+       </div>
+       
       
     </header>
     <!-- image section end here -->
@@ -254,99 +282,68 @@ We are a digital transformation and technology partner of choice for industry-le
   toggleButton.addEventListener('click', () => {
     toggleButton.classList.toggle('top-full');
   });
+// ====== BUTTONS & PANELS ======
+const homeBtn = document.getElementById("homeBtn");   // Service
+const servBtn = document.getElementById("servBtn");   // Industries
+const insiBtn = document.getElementById("insiBtn");   // Insights
+const contBtn = document.getElementById("contBtn");   // Contact
+const careBtn = document.getElementById("careBtn");   // Career
 
+// const homeFeatures = document.getElementById("homeFeatures");
+// const servFeatures = document.getElementById("servFeatures");
+// const insiFeatures = document.getElementById("insiFeatures");
+// const contFeatures = document.getElementById("contFeatures");
+// const careFeatures = document.getElementById("careFeatures");
 
-  // Features (show on hover) script start here
-const homeBtn = document.getElementById("homeBtn");
-const homeFeatures = document.getElementById("homeFeatures");
+// Inner panel
+const consuBtn  = document.getElementById("consuBtn");
+const consuFeat = document.getElementById("consuFeat");
 
-const servBtn = document.getElementById("servBtn");
-const servFeatures = document.getElementById("servFeatures");
+// All panels list
+const panels = [homeFeatures, servFeatures, insiFeatures, contFeatures, careFeatures, consuFeat].filter(Boolean);
 
-const insiBtn = document.getElementById("insiBtn");
-const insiFeatures = document.getElementById("insiFeatures");
-
-const contBtn = document.getElementById("contBtn");
-const contFeatures = document.getElementById("contFeatures");
-
-const careBtn = document.getElementById("careBtn");
-const careFeatures = document.getElementById("careFeatures");
-
-const consuBtn = document.getElementById("consuBtn");
-const consuFeat =document.getElementById("consuFeat");
-
-
-consuBtn.addEventListener("click",()=>{
-consuFeat.classList.toggle("hidden");
+// ====== HELPERS ======
+function hideAll() {
+  panels.forEach(p => p.classList.add("hidden"));
 }
-);
 
+// Stop outside-close when interacting inside any panel
+// Use pointerdown so it blocks the document pointerdown closer.
+panels.forEach(p => p.addEventListener("pointerdown", e => e.stopPropagation()));
 
+// ====== TOP BAR BUTTONS (one open at a time) ======
+function wire(btn, panel) {
+  if (!btn || !panel) return;
+  btn.addEventListener("pointerdown", e => {
+    e.stopPropagation();                    // don't trigger outside closer
+    const willShow = panel.classList.contains("hidden");
+    hideAll();
+    if (willShow) panel.classList.remove("hidden");
+  });
+}
 
+wire(homeBtn, homeFeatures);   // "Service" opens #homeFeatures
+wire(servBtn, servFeatures);
+wire(insiBtn, insiFeatures);
+wire(contBtn, contFeatures);
+wire(careBtn, careFeatures);
 
-homeBtn.addEventListener("click", () => {
-  // hide others
-  servFeatures.classList.add("hidden");
-  insiFeatures.classList.add("hidden");
-  contFeatures.classList.add("hidden");
-  careFeatures.classList.add("hidden");
- 
+// ====== INNER TOGGLE (Consulting) ======
+if (consuBtn && consuFeat) {
+  consuBtn.addEventListener("pointerdown", e => {
+    e.stopPropagation();
+    consuFeat.classList.toggle("hidden");
+  });
+}
 
-  // toggle home features
-  homeFeatures.classList.toggle("hidden");
+// ====== OUTSIDE CLICK/TAP -> CLOSE ALL ======
+document.addEventListener("pointerdown", hideAll);
+
+// ====== ESC KEY -> CLOSE ALL ======
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") hideAll();
 });
 
-servBtn.addEventListener("click", () => {
-  // hide others
-  homeFeatures.classList.add("hidden");
-  insiFeatures.classList.add("hidden");
-  contFeatures.classList.add("hidden");
-  careFeatures.classList.add("hidden");
-
-  // toggle service features
-  servFeatures.classList.toggle("hidden");
-});
-
-insiBtn.addEventListener("click", () => {
-  // hide others
-  homeFeatures.classList.add("hidden");
-  servFeatures.classList.add("hidden");
-  contFeatures.classList.add("hidden");
-  careFeatures.classList.add("hidden");
-
-  // toggle insights features
-  insiFeatures.classList.toggle("hidden");
-});
-
-contBtn.addEventListener("click", () => {
-  // hide others
-  homeFeatures.classList.add("hidden");
-  servFeatures.classList.add("hidden");
-  insiFeatures.classList.add("hidden");
-  careFeatures.classList.add("hidden");
-
-  // toggle insights features
-  contFeatures.classList.toggle("hidden");
-});
-
-careBtn.addEventListener("click", () => {
-  // hide others
-  homeFeatures.classList.add("hidden");
-  servFeatures.classList.add("hidden");
-  insiFeatures.classList.add("hidden");
-  contFeatures.classList.add("hidden");
-
-  // toggle insights features
-  careFeatures.classList.toggle("hidden");
-});
-
-
-  
-
-
- 
-  // Features (show on hover) script end here
-  
   </script>
 <!-- toggle button behaviour code end here -->
 
